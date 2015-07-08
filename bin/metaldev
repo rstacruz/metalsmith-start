@@ -1,11 +1,13 @@
 #!/usr/bin/env node
-
 process.env.METALSMITH_ENV = 'development'
 
 var dir = process.cwd()
 var ms = require('../lib/index')
 var log = require('../lib/log').log
 var fatal = require('../lib/log').fatal
+var chalk = require('chalk')
+var debounce = require('debounce')
+var chokidar = require('chokidar')
 
 try {
   metalsmith = ms(dir)
@@ -13,7 +15,23 @@ try {
   fatal(e.message)
 }
 
-metalsmith.build(function (err) {
-  if (err) return fatal(err.message, err.stack)
-  log('successfully built to ' + metalsmith.destination())
+var watcher = chokidar.watch(metalsmith.source(), {
+  ignoreInitial: true,
+  cwd: dir
 })
+.on('all', debounce(build, 50))
+build()
+
+log('watching for changes, ^c to abort')
+
+function build (k) {
+  var start = new Date()
+  metalsmith.build(function (err) {
+    var duration = new Date() - start
+    if (err) {
+      log('err: ' + err.message + '\n' + err.stack)
+    } else {
+      log(chalk.green('✓') + '  build ok ' + chalk.black('[' + duration + 'ms]'))
+    }
+  })
+}
