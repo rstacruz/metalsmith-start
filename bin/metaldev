@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+process.env.METALSMITH_ENV = 'development'
+
+var dir = process.cwd()
+var ms = require('../lib/index')
+var log = require('../lib/log').log
+var fatal = require('../lib/log').fatal
+
+try {
+  metalsmith = ms(dir)
+} catch (e) {
+  fatal(e.message)
+}
+
+metalsmith.build(function (err) {
+  if (err) return fatal(err.message, err.stack)
+  log('successfully built to ' + metalsmith.destination())
+})
