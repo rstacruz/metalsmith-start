@@ -111,3 +111,30 @@ function normalize (obj) {
 }
 
 module.exports = ms
+
+/*
+ * metalsmith api:
+ *
+ *     m = Metalsmith(path)
+ *
+ * properties:
+ *
+ *     .source()
+ *     .destination()
+ *     .concurrency()
+ *     .clean()
+ *     .frontmatter()
+ *     .ignore(['index.md'])
+ *     .metadata()
+ *     .metadata().development
+ *
+ * methods:
+ *
+ *     .path('src/index.md')
+ *     .build(fn)
+ *
+ * internal:
+ *
+ *     .run(files, plugins)
+ *     .writeFile('xx', 'data')
+ */

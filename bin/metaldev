@@ -6,8 +6,10 @@ var ms = require('../lib/index')
 var log = require('../lib/log').log
 var fatal = require('../lib/log').fatal
 var chalk = require('chalk')
+var connect = require('connect')
 var debounce = require('debounce')
 var chokidar = require('chokidar')
+var serveStatic = require('serve-static')
 
 try {
   metalsmith = ms(dir)
@@ -15,14 +17,26 @@ try {
   fatal(e.message)
 }
 
-var watcher = chokidar.watch(metalsmith.source(), {
-  ignoreInitial: true,
-  cwd: dir
-})
-.on('all', debounce(build, 50))
 build()
+watch()
+serve({ port: 3000 })
 
-log('watching for changes, ^c to abort')
+function serve (options) {
+  var server = connect()
+  server.use(serveStatic(metalsmith.destination()))
+  server.listen(options.port, function () {
+    log('serving to http://localhost:' + options.port)
+  })
+}
+
+function watch () {
+  log('watching for changes, ^c to abort')
+  var watcher = chokidar.watch(metalsmith.source(), {
+    ignoreInitial: true,
+    cwd: dir
+  })
+  .on('all', debounce(build, 50))
+}
 
 function build (k) {
   var start = new Date()
