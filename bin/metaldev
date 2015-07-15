@@ -10,6 +10,7 @@ var connect = require('connect')
 var debounce = require('debounce')
 var chokidar = require('chokidar')
 var serveStatic = require('serve-static')
+var livereloader = require('../lib/livereloader')
 
 try {
   metalsmith = ms(dir)
@@ -17,12 +18,15 @@ try {
   fatal(e.message)
 }
 
-build()
-watch()
-serve({ port: 3000 })
+build(function (err) {
+  if (err) throw err
+  watch()
+  serve({ port: 3000 })
+})
 
 function serve (options) {
   var server = connect()
+  livereloader(server, metalsmith)
   server.use(serveStatic(metalsmith.destination()))
   server.listen(options.port, function () {
     log('serving to http://localhost:' + options.port)
@@ -38,14 +42,16 @@ function watch () {
   .on('all', debounce(build, 50))
 }
 
-function build (k) {
+function build (fn) {
   var start = new Date()
   metalsmith.build(function (err) {
     var duration = new Date() - start
     if (err) {
       log('err: ' + err.message + '\n' + err.stack)
+      if (typeof fn === 'function') fn(err)
     } else {
       log(chalk.green('✓') + '  build ok ' + chalk.black('[' + duration + 'ms]'))
+      if (typeof fn === 'function') fn()
     }
   })
 }
