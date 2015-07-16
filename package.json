@@ -1,10 +1,14 @@
 {
   "name": "metalsmith-start",
+  "description": "development server for metalsmith.",
   "version": "0.0.1",
   "author": "Rico Sta. Cruz <rico@ricostacruz.com>",
   "bin": {
     "metalsmith-start": "bin/metalsmith-start",
     "metalstart": "bin/metalsmith-start"
+  },
+  "bugs": {
+    "url": "https://github.com/rstacruz/metalsmith-start/issues"
   },
   "dependencies": {
     "chalk": "^1.1.0",
@@ -25,6 +29,7 @@
   },
   "devDependencies": {
     "expect": "^1.6.0",
+    "istanbul": "^0.3.17",
     "mocha": "^2.2.5",
     "mocha-standard": "^1.0.0",
     "standard": "^4.5.2",
@@ -33,9 +38,20 @@
   "directories": {
     "test": "test"
   },
+  "homepage": "https://github.com/rstacruz/metalsmith-start#readme",
+  "keywords": [
+    "jekyll",
+    "metalsmith",
+    "static"
+  ],
   "license": "MIT",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rstacruz/metalsmith-start.git"
+  },
   "scripts": {
+    "coverage": "istanbul cover _mocha -- -R spec",
     "test": "mocha"
   }
 }
