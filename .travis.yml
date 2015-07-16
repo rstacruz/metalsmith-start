@@ -1,5 +1,5 @@
 language: node_js
 node_js:
   - iojs
-script:
-  - npm run coverage
+# script:
+#   - npm run coverage
