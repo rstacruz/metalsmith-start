@@ -14,9 +14,7 @@ program
   .option('-R, --no-livereload', 'disable livereload')
   .parse(process.argv)
 
-try {
-  var r = new Runner(dir, program)
-  r.start(function () {})
-} catch (e) {
-  fatal(e.message)
-}
+var r = new Runner(dir, program)
+r.start(function (err) {
+  if (err) fatal(err.message)
+})
