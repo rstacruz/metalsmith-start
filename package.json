@@ -27,7 +27,8 @@
     "expect": "^1.6.0",
     "mocha": "^2.2.5",
     "mocha-standard": "^1.0.0",
-    "standard": "^4.5.2"
+    "standard": "^4.5.2",
+    "supertest": "^1.0.1"
   },
   "directories": {
     "test": "test"
