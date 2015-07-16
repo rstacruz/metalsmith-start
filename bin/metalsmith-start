@@ -10,6 +10,7 @@ var connect = require('connect')
 var program = require('commander')
 var debounce = require('debounce')
 var chokidar = require('chokidar')
+var serveIndex = require('serve-index')
 var serveStatic = require('serve-static')
 var livereloader = require('../lib/livereloader')
 
@@ -40,6 +41,7 @@ function serve (options) {
     })
   }
   server.use(serveStatic(metalsmith.destination()))
+  server.use(serveIndex(metalsmith.destination()))
   server.listen(options.port, function () {
     log('serving to http://localhost:' + options.port)
   })

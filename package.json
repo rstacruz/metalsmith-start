@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "author": "Rico Sta. Cruz <rico@ricostacruz.com>",
   "bin": {
-    "metalsmith-start": "bin/metalsmith-start"
+    "metalsmith-start": "bin/metalsmith-start",
+    "metalstart": "bin/metalsmith-start"
   },
   "dependencies": {
     "chalk": "^1.1.0",
@@ -15,6 +16,7 @@
     "get-port": "^1.0.0",
     "metalsmith": "^1.7.0",
     "object-assign": "^3.0.0",
+    "serve-index": "^1.7.1",
     "serve-static": "^1.10.0",
     "tiny-lr": "^0.1.6"
   },
