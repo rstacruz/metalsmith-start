@@ -13,6 +13,7 @@ var chokidar = require('chokidar')
 var serveIndex = require('serve-index')
 var serveStatic = require('serve-static')
 var livereloader = require('../lib/livereloader')
+var Runner = require('../lib/runner')
 
 program
   .version(require('../package.json').version)
@@ -21,51 +22,9 @@ program
   .parse(process.argv)
 
 try {
-  metalsmith = ms(dir)
+  var r = new Runner(dir, program)
+  console.log(r)
+  r.start()
 } catch (e) {
   fatal(e.message)
-}
-
-build(function (err) {
-  if (err) throw err
-  watch()
-  serve(program)
-})
-
-function serve (options) {
-  var server = connect()
-  if (options.livereload) {
-    livereloader(server, metalsmith, function (err, _options) {
-      if (err) throw err
-      log('livereload is listening on port ' + _options.port)
-    })
-  }
-  server.use(serveStatic(metalsmith.destination()))
-  server.use(serveIndex(metalsmith.destination()))
-  server.listen(options.port, function () {
-    log('serving to http://localhost:' + options.port)
-  })
-}
-
-function watch () {
-  log('watching for changes, ^c to abort')
-  var watcher = chokidar.watch(metalsmith.source(), {
-    ignoreInitial: true,
-    cwd: dir
-  })
-  .on('all', debounce(build, 50))
-}
-
-function build (fn) {
-  var start = new Date()
-  metalsmith.build(function (err) {
-    var duration = new Date() - start
-    if (err) {
-      log('err: ' + err.message + '\n' + err.stack)
-      if (typeof fn === 'function') fn(err)
-    } else {
-      log(chalk.green('✓') + '  build ok ' + chalk.black('[' + duration + 'ms]'))
-      if (typeof fn === 'function') fn()
-    }
-  })
 }
