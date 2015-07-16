@@ -6,6 +6,7 @@ process.env.METALSMITH_ENV = 'development'
 var dir = process.cwd()
 var Runner = require('../lib/runner')
 var program = require('commander')
+var fatal = require('../lib/log').fatal
 
 program
   .version(require('../package.json').version)
