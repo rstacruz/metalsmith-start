@@ -7,10 +7,17 @@ var log = require('../lib/log').log
 var fatal = require('../lib/log').fatal
 var chalk = require('chalk')
 var connect = require('connect')
+var program = require('commander')
 var debounce = require('debounce')
 var chokidar = require('chokidar')
 var serveStatic = require('serve-static')
 var livereloader = require('../lib/livereloader')
+
+program
+  .version(require('../package.json').version)
+  .option('-p, --port <port>', 'specify the port [3000]', Number, 3000)
+  .option('-R, --no-livereload', 'disable livereload')
+  .parse(process.argv)
 
 try {
   metalsmith = ms(dir)
@@ -21,12 +28,17 @@ try {
 build(function (err) {
   if (err) throw err
   watch()
-  serve({ port: 3000 })
+  serve(program)
 })
 
 function serve (options) {
   var server = connect()
-  livereloader(server, metalsmith)
+  if (options.livereload) {
+    livereloader(server, metalsmith, function (err, _options) {
+      if (err) throw err
+      log('livereload is listening on port ' + _options.port)
+    })
+  }
   server.use(serveStatic(metalsmith.destination()))
   server.listen(options.port, function () {
     log('serving to http://localhost:' + options.port)

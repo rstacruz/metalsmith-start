@@ -1,9 +1,9 @@
 {
-  "name": "metalsmith-dev",
+  "name": "metalsmith-start",
   "version": "0.0.1",
-  "author": "Rico Sta. Cruz <hi@ricostacruz.com>",
+  "author": "Rico Sta. Cruz <rico@ricostacruz.com>",
   "bin": {
-    "metaldev": "bin/metaldev"
+    "metalsmith-start": "bin/metalsmith-start"
   },
   "dependencies": {
     "chalk": "^1.1.0",

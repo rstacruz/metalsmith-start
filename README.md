@@ -1,6 +1,6 @@
-# metalsmith-dev
+# metalsmith-start
 
 development server for metalsmith.
 
-- consumes the same `metalsmith.json`
+- consumes the standard `metalsmith.json`.
 - starts development server and livereload.
