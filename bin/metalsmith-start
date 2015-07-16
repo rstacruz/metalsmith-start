@@ -1,19 +1,11 @@
 #!/usr/bin/env node
+require('gnode')
+
 process.env.METALSMITH_ENV = 'development'
 
 var dir = process.cwd()
-var ms = require('../lib/index')
-var log = require('../lib/log').log
-var fatal = require('../lib/log').fatal
-var chalk = require('chalk')
-var connect = require('connect')
-var program = require('commander')
-var debounce = require('debounce')
-var chokidar = require('chokidar')
-var serveIndex = require('serve-index')
-var serveStatic = require('serve-static')
-var livereloader = require('../lib/livereloader')
 var Runner = require('../lib/runner')
+var program = require('commander')
 
 program
   .version(require('../package.json').version)
@@ -23,8 +15,7 @@ program
 
 try {
   var r = new Runner(dir, program)
-  console.log(r)
-  r.start()
+  r.start(function () {})
 } catch (e) {
   fatal(e.message)
 }

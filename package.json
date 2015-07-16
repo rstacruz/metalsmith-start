@@ -14,11 +14,14 @@
     "connect-static": "^1.5.0",
     "debounce": "^1.0.0",
     "get-port": "^1.0.0",
+    "gnode": "^0.1.1",
     "metalsmith": "^1.7.0",
     "object-assign": "^3.0.0",
     "serve-index": "^1.7.1",
     "serve-static": "^1.10.0",
-    "tiny-lr": "^0.1.6"
+    "thunkify": "^2.1.2",
+    "tiny-lr": "^0.1.6",
+    "unyield": "0.0.1"
   },
   "devDependencies": {
     "expect": "^1.6.0",
