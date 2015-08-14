@@ -12,7 +12,7 @@ var fatal = require('../lib/log').fatal
 
 program
   .version(require('../package.json').version)
-  .option('-p, --port <port>', 'specify the port [3000]', Number, 3000)
+  .option('-p, --port <port>', 'specify the port', Number)
   .option('-R, --no-livereload', 'disable livereload')
   .parse(process.argv)
 
