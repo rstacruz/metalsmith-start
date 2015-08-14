@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 require('gnode')
 
-process.env.METALSMITH_ENV = 'development'
+if (typeof process.env.METALSMITH === 'undefined') {
+  process.env.METALSMITH_ENV = process.env.NODE_ENV || 'development'
+}
 
 var dir = process.cwd()
 var Runner = require('../lib/runner')
