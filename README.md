@@ -19,10 +19,9 @@ $ metalsmith-start
 metalsmith-start honors the following variables:
 
 * `NODE_ENV`
-* `METALSMITH_ENV`
 * `PORT`
 
-If either `NODE_ENV` or `METALSMITH_ENV` are set to `production`, then development features (such as LiveReload) will be disabled by default.
+If either `NODE_ENV` is set to `production`, then development features (such as LiveReload) will be disabled by default.
 
 This means that you can run a production setup using:
 

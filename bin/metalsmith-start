@@ -2,7 +2,7 @@
 require('gnode')
 
 if (typeof process.env.METALSMITH === 'undefined') {
-  process.env.METALSMITH_ENV = process.env.NODE_ENV || 'development'
+  process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 }
 
 var dir = process.cwd()
