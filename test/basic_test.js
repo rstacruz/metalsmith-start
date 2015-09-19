@@ -59,7 +59,7 @@ describe('my project', function () {
         request(this.run.app).get('/')
           .expect(/werd/)
           .end(next)
-      }.bind(this), 800)
+      }.bind(this), 1200)
     })
   })
 })
