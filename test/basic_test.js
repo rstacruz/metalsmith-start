@@ -1,7 +1,7 @@
 /* global describe, it, beforeEach, afterEach */
 var fixture = require('./support/fixture')
 var runner = require('./support/runner')
-var eventually = require('./support/eventually')
+var eventually = require('mocha-eventually')
 
 var request = require('supertest')
 var fs = require('fs')
