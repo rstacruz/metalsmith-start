@@ -20,11 +20,10 @@ describe('lib/livereloader', function () {
   })
 
   describe('injectLR()', function () {
-    var mware, req, write, res
+    var mware, write, res
 
     beforeEach(function () {
       mware = lr.injectLR(3000)
-      req = { url: '/' }
       write = stub()
       res = {
         write: write,
@@ -35,11 +34,32 @@ describe('lib/livereloader', function () {
     })
 
     it('works', function (done) {
-      mware(req, res, function (err) {
+      mware({ url: '/' }, res, function (err) {
         if (err) throw err
         res.write('<html><body></body></html>')
         expect(write).toHaveBeenCalled()
         expect(write.calls[0].arguments[0]).toInclude(':3000/livereload.js')
+        done()
+      })
+    })
+
+    it('works even without closing body tag', function (done) {
+      mware({ url: '/' }, res, function (err) {
+        if (err) throw err
+        res.write('Hello')
+        expect(write).toHaveBeenCalled()
+        expect(write.calls[0].arguments[0]).toInclude(':3000/livereload.js')
+        done()
+      })
+    })
+
+    it('ignores non-html\'s', function (done) {
+      res._headers = { 'content-type': 'image/png' }
+      mware({ url: '/' }, res, function (err) {
+        if (err) throw err
+        res.write('Hello')
+        expect(write).toHaveBeenCalled()
+        expect(write.calls[0].arguments[0].indexOf(':3000/livereload.js')).toEqual(-1)
         done()
       })
     })

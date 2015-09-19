@@ -33,6 +33,25 @@ describe('my project', function () {
     })
   })
 
+  describe('livereload test', function () {
+    beforeEach(function (next) {
+      this.run.metalsmith.build(function (err, res) {
+        if (err) throw err
+        next()
+      })
+    })
+
+    // just a sanity test really, let's make sure LiveReload doesn't throw
+    // exceptions along the way
+    it('works', function () {
+      return eventually(function (next) {
+        request(this.run.app).get('/')
+          .expect(/./)
+          .end(next)
+      }.bind(this), 1000)
+    })
+  })
+
   describe('main port', function () {
     it('has livereload', function (next) {
       request(this.run.app).get('/')
