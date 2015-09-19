@@ -1,3 +1,8 @@
+## v1.0.0
+> Sep 20, 2015
+
+- Declared as v1.0.0 - no functional changes.
+
 ## v0.6.1
 > Sep 20, 2015
 
