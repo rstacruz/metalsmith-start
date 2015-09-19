@@ -1,3 +1,10 @@
+## v0.6.0
+> Sep 20, 2015
+
+- Add support for [superstatic] configuration.
+
+[superstatic]: https://www.npmjs.com/package/superstatic
+
 ## v0.5.0
 > Sep 20, 2015
 
