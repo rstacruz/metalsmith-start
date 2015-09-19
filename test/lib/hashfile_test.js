@@ -1,8 +1,8 @@
-var fixture = require('./support/fixture')
+var fixture = require('../support/fixture')
 
 describe('hashfile', function () {
-  var hashFile = require('../lib/hashfile').hashFile
-  var hashFiles = require('../lib/hashfile').hashFiles
+  var hashFile = require('../../lib/hashfile').hashFile
+  var hashFiles = require('../../lib/hashfile').hashFiles
 
   describe('hashFile()', function () {
     it('works', function (next) {

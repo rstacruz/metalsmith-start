@@ -27,6 +27,7 @@
   "devDependencies": {
     "expect": "^1.6.0",
     "istanbul": "^0.3.17",
+    "metalsmith-layouts": "^1.4.1",
     "mocha": "^2.2.5",
     "mocha-standard": "^1.0.0",
     "standard": "^5.3.1",

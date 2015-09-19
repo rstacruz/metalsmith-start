@@ -1,6 +1,8 @@
 /* global describe, it, beforeEach, afterEach */
 var fixture = require('./support/fixture')
 var runner = require('./support/runner')
+var ms = require('./support/ms')
+
 var request = require('supertest')
 var fs = require('fs')
 
@@ -65,6 +67,3 @@ describe('my project', function () {
   })
 })
 
-function ms (duration) {
-  return process.env.CI ? duration * 5 : duration
-}
