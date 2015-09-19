@@ -1,20 +1,29 @@
 # metalsmith-start
 
-development server for metalsmith.
+Development server for metalsmith.
 
 [![Status](https://travis-ci.org/rstacruz/metalsmith-start.svg?branch=master)](https://travis-ci.org/rstacruz/metalsmith-start "See test builds")
 
-- consumes the standard `metalsmith.json`.
-- consumes `metalsmith.js`.
-- starts development server and livereload.
+- Consumes the standard `metalsmith.json`.
+- Consumes `metalsmith.js`.
+- Auto-recompiles when files are changed.
+- Starts development server and LiveReload.
 
-### Command-line
+<br>
+
+## Command-line
+
+Run `metalsmith-start` or `metalstart` in your Metalsmith's project directory.
 
 ```
-$ metalsmith-start
+metalsmith-start
 ```
 
-### Production
+See `--help` for more options.
+
+<br>
+
+## Production
 
 metalsmith-start honors the following variables:
 
@@ -31,7 +40,32 @@ env NODE_ENV=production PORT=4000 metalsmith-start
 
 This also means you can push your repo to Heroku with no changes and it'll work just fine.
 
-### Programatic
+<br>
+
+## Using metalsmith.js
+
+If a file called `metalsmith.js` is found in the current directory, it's assumed it's a JS module that returns a `Metalsmith` instance.
+
+Below is a sample metalsmith.js:
+
+```js
+var Metalsmith = require('metalsmith')
+
+var app = Metalsmith(__dirname)
+  .source('./src')
+  .destination('./public')
+  .use(...)
+
+if (module.parent) {
+  module.exports = app
+} else {
+  app.build(function (err) { if (err) throw err })
+}
+```
+
+<br>
+
+## Programatic usage
 
 ```js
 var Runner = require('metalsmith-start').Runner
@@ -45,3 +79,17 @@ r.start(function () {
   console.log('started on ' + r.port)
 })
 ```
+
+<br>
+
+## Thanks
+
+**metalsmith-start** © 2015+, Rico Sta. Cruz. Released under the [MIT] License.<br>
+Authored and maintained by Rico Sta. Cruz with help from contributors ([list][contributors]).
+
+> [ricostacruz.com](http://ricostacruz.com) &nbsp;&middot;&nbsp;
+> GitHub [@rstacruz](https://github.com/rstacruz) &nbsp;&middot;&nbsp;
+> Twitter [@rstacruz](https://twitter.com/rstacruz)
+
+[MIT]: http://mit-license.org/
+[contributors]: http://github.com/rstacruz/metalsmith-start/contributors
