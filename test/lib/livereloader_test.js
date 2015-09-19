@@ -29,6 +29,7 @@ describe('lib/livereloader', function () {
       res = {
         write: write,
         setHeader: stub(),
+        _headers: { 'content-type': 'text/html' },
         _implicitHeader: stub()
       }
     })
