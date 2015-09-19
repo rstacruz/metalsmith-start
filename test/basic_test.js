@@ -1,6 +1,7 @@
 /* global describe, it, beforeEach, afterEach */
 var fixture = require('./support/fixture')
 var runner = require('./support/runner')
+var eventually = require('./support/eventually')
 var ms = require('./support/ms')
 
 var request = require('supertest')
@@ -56,9 +57,9 @@ describe('my project', function () {
       fs.writeFileSync(fixture('sample/src/index.html'), this.oldData, 'utf-8')
     })
 
-    it('auto rebuilds', function (next) {
+    it('auto rebuilds', function () {
       fs.writeFileSync(fixture('sample/src/index.html'), '<html><body>werd</body></html>', 'utf-8')
-      setTimeout(function () {
+      return eventually(function (next) {
         request(this.run.app).get('/')
           .expect(/werd/)
           .end(next)
@@ -66,4 +67,3 @@ describe('my project', function () {
     })
   })
 })
-
