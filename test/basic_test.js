@@ -5,6 +5,7 @@ var request = require('supertest')
 var fs = require('fs')
 
 describe('my project', function () {
+  this.timeout(ms(2000))
 
   runner(fixture('sample'))
 
@@ -59,7 +60,11 @@ describe('my project', function () {
         request(this.run.app).get('/')
           .expect(/werd/)
           .end(next)
-      }.bind(this), 1200)
+      }.bind(this), ms(1200))
     })
   })
 })
+
+function ms (duration) {
+  return process.env.CI ? duration * 5 : duration
+}
