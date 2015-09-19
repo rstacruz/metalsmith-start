@@ -1,3 +1,9 @@
+## v0.6.1
+> Sep 20, 2015
+
+- Minor improvements to auto-compiling
+- Fix issue where writing .map files can refresh an entire page
+
 ## v0.6.0
 > Sep 20, 2015
 
