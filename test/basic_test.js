@@ -2,13 +2,12 @@
 var fixture = require('./support/fixture')
 var runner = require('./support/runner')
 var eventually = require('./support/eventually')
-var ms = require('./support/ms')
 
 var request = require('supertest')
 var fs = require('fs')
 
 describe('my project', function () {
-  this.timeout(ms(2000))
+  this.timeout(10000)
 
   runner(fixture('sample'))
 
@@ -63,7 +62,7 @@ describe('my project', function () {
         request(this.run.app).get('/')
           .expect(/werd/)
           .end(next)
-      }.bind(this), ms(1200))
+      }.bind(this), 8000)
     })
   })
 })
