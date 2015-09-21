@@ -1,6 +1,5 @@
 /* global describe, it, expect */
 
-var thunkify = require('thunkify')
 var fixture = require('../support/fixture')
 var Helpers = require('../../lib/helpers')
 
@@ -39,7 +38,7 @@ describe('helpers: safe()', function () {
   var safe = Helpers.safe
 
   it('works', function (next) {
-    var stat = safe(thunkify(require('fs').stat))
+    var stat = safe(require('mz/fs').stat)
     stat('non-existent-file.txt', function (err, res) {
       if (err) throw err
       next()
