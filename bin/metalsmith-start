@@ -9,14 +9,23 @@ var dir = process.cwd()
 var Runner = require('../lib/runner')
 var program = require('commander')
 var fatal = require('../lib/log').fatal
+var fs = require('fs')
+var join = require('path').join
 
 program
   .version(require('../package.json').version)
   .option('-p, --port <port>', 'specify the port', Number)
   .option('-R, --no-livereload', 'disable livereload')
+  .option('--config', 'shows a sample config file')
   .parse(process.argv)
 
 try {
+  if (program.config) {
+    var path = join(__dirname, '../data/metalsmith.js')
+    var data = fs.readFileSync(path, 'utf-8')
+    process.stdout.write(data)
+    process.exit(0)
+  }
   var r = new Runner(dir, program)
   r.start(function (err) {
     if (err) fatal(err.message, err.stack)
