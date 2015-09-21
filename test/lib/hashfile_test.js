@@ -5,50 +5,45 @@ describe('hashfile', function () {
   var hashFiles = require('../../lib/hashfile').hashFiles
 
   describe('hashFile()', function () {
-    it('works', function (next) {
-      hashFile(fixture('files/file1.txt'), function (err, res) {
-        if (err) throw err
+    it('works', function () {
+      return hashFile(fixture('files/file1.txt'))
+      .then(function (res) {
         expect(res).toEqual('ce57c01c8bda67ce22ded81b28657213a99e69b3')
-        next()
       })
     })
 
-    it('works again', function (next) {
-      hashFile(fixture('files/file2.txt'), function (err, res) {
-        if (err) throw err
+    it('works again', function () {
+      return hashFile(fixture('files/file2.txt'))
+      .then(function (res) {
         expect(res).toEqual('d06a59c73d2363d6c0692de0e3d7629a9480f901')
-        next()
       })
     })
 
-    it('can handle not founds', function (next) {
-      hashFile('ayylmao', function (err, res) {
-        if (err) throw err
+    it('can handle not founds', function () {
+      return hashFile('ayylmao')
+      .then(function (res) {
         expect(res).toEqual(null)
-        next()
       })
     })
 
-    it('can handle directories', function (next) {
-      hashFile(fixture('files/'), function (err, res) {
-        if (err) throw err
+    it('can handle directories', function () {
+      return hashFile(fixture('files/'))
+      .then(function (res) {
         expect(res).toEqual(null)
-        next()
       })
     })
   })
 
   describe('hashFiles()', function () {
-    beforeEach(function (next) {
+    beforeEach(function () {
       var files = [
         'file1.txt',
         'file2.txt'
       ]
 
-      hashFiles(fixture('files'), files, function (err, res) {
-        if (err) throw err
+      return hashFiles(fixture('files'), files)
+      .then(function (res) {
         this.result = res
-        next()
       }.bind(this))
     })
 
