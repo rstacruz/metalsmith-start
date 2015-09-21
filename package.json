@@ -15,7 +15,7 @@
     "chokidar": "^1.0.3",
     "co": "^4.6.0",
     "commander": "^2.8.1",
-    "debounce": "^1.0.0",
+    "debounce-collect": "^1.0.0",
     "get-port": "^1.0.0",
     "gnode": "^0.1.1",
     "metalsmith": "^1.7.0",
