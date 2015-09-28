@@ -18,7 +18,7 @@
     "debounce-collect": "^1.0.0",
     "get-port": "^1.0.0",
     "gnode": "^0.1.1",
-    "metalsmith": "^1.7.0",
+    "metalsmith": "2.1.0",
     "mz": "^2.0.0",
     "object-assign": "^3.0.0",
     "superstatic": "^1.2.3",
