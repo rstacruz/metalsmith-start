@@ -21,7 +21,7 @@ program
 
 try {
   if (program.config) {
-    if (process.stdin.isTTY) {
+    if (process.stdout.isTTY) {
       var chalk = require('chalk')
       process.stderr.write(
         chalk.green('// Instructions: save this file as metalsmith.js.\n') +
