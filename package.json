@@ -20,7 +20,7 @@
     "gnode": "^0.1.1",
     "metalsmith": "2.1.0",
     "mz": "^2.0.0",
-    "object-assign": "^3.0.0",
+    "object-assign": "4.0.1",
     "superstatic": "^1.2.3",
     "thunkify": "^2.1.2",
     "tiny-lr": "0.2.0",
