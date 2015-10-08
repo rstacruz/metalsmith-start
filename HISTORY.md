@@ -1,3 +1,8 @@
+## [v1.2.0]
+> Oct  9, 2015
+
+- Lock version dependencies; no functional changes.
+
 ## [v1.1.0]
 > Oct  5, 2015
 
@@ -43,10 +48,11 @@
 
 - Initial release.
 
-[v1.1.0]: https://github.com/rstacruz/metalsmith-start/compare/v1.0.1...v1.1.0
-[v1.0.1]: https://github.com/rstacruz/metalsmith-start/compare/v1.0.0...v1.0.1
-[v1.0.0]: https://github.com/rstacruz/metalsmith-start/compare/v0.6.1...v1.0.0
-[v0.6.1]: https://github.com/rstacruz/metalsmith-start/compare/v0.6.0...v0.6.1
-[v0.6.0]: https://github.com/rstacruz/metalsmith-start/compare/v0.5.0...v0.6.0
-[v0.5.0]: https://github.com/rstacruz/metalsmith-start/compare/v0.4.0...v0.5.0
 [v0.4.0]: https://github.com/rstacruz/metalsmith-start/compare/v0.1.0...v0.4.0
+[v0.5.0]: https://github.com/rstacruz/metalsmith-start/compare/v0.4.0...v0.5.0
+[v0.6.0]: https://github.com/rstacruz/metalsmith-start/compare/v0.5.0...v0.6.0
+[v0.6.1]: https://github.com/rstacruz/metalsmith-start/compare/v0.6.0...v0.6.1
+[v1.0.0]: https://github.com/rstacruz/metalsmith-start/compare/v0.6.1...v1.0.0
+[v1.0.1]: https://github.com/rstacruz/metalsmith-start/compare/v1.0.0...v1.0.1
+[v1.1.0]: https://github.com/rstacruz/metalsmith-start/compare/v1.0.1...v1.1.0
+[v1.2.0]: https://github.com/rstacruz/metalsmith-start/compare/v1.1.0...v1.2.0
