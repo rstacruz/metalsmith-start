@@ -8,7 +8,6 @@ if (typeof process.env.METALSMITH === 'undefined') {
 var dir = process.cwd()
 var Runner = require('../lib/runner')
 var program = require('commander')
-var fatal = require('../lib/log').fatal
 var fs = require('fs')
 var join = require('path').join
 
@@ -35,8 +34,8 @@ try {
   }
   var r = new Runner(dir, program)
   r.start(function (err) {
-    if (err) fatal(err.message, err.stack)
+    if (err) console.error(err.message)
   })
 } catch (err) {
-  fatal(err.message, err.stack)
+  console.error(err.message)
 }
