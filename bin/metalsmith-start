@@ -34,7 +34,7 @@ try {
   }
   var r = new Runner(dir, program)
   r.start(function (err) {
-    if (err) console.error(err.message)
+    if (err) r.reporter.showErr(err)
   })
 } catch (err) {
   console.error(err.message)
