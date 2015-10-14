@@ -54,5 +54,9 @@
   "scripts": {
     "coverage": "istanbul cover _mocha -- -R spec",
     "test": "mocha"
+  },
+  "docpress": {
+    "css": "http://ricostacruz.com/docpress-rsc/style.css",
+    "github": "rstacruz/metalsmith-start"
   }
 }
