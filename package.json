@@ -15,6 +15,7 @@
     "chokidar": "1.2.0",
     "co": "4.6.0",
     "commander": "2.9.0",
+    "connect-livereload": "0.5.3",
     "debounce-collect": "1.0.2",
     "get-port": "1.0.0",
     "gnode": "0.1.1",
@@ -22,7 +23,7 @@
     "mz": "2.0.0",
     "object-assign": "3.0.0",
     "observatory": "1.0.0",
-    "superstatic": "1.2.3",
+    "superstatic": "3.0.0",
     "thunkify": "2.1.2",
     "tiny-lr": "0.2.1",
     "unyield": "0.0.1"
