@@ -1,3 +1,8 @@
+## [v1.3.1]
+> Oct 15, 2015
+
+- Fix issue with cursor behaving erratically (https://github.com/dylang/observatory/pull/6)
+
 ## [v1.3.0]
 > Oct 15, 2015
 
@@ -62,3 +67,4 @@
 [v1.1.0]: https://github.com/rstacruz/metalsmith-start/compare/v1.0.1...v1.1.0
 [v1.2.0]: https://github.com/rstacruz/metalsmith-start/compare/v1.1.0...v1.2.0
 [v1.3.0]: https://github.com/rstacruz/metalsmith-start/compare/v1.2.0...v1.3.0
+[v1.3.1]: https://github.com/rstacruz/metalsmith-start/compare/v1.3.0...v1.3.1
