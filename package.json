@@ -11,8 +11,8 @@
     "url": "https://github.com/rstacruz/metalsmith-start/issues"
   },
   "dependencies": {
+    "chalk": "1.1.1",
     "chokidar": "1.2.0",
-    "cli-color": "1.1.0",
     "co": "4.6.0",
     "commander": "2.9.0",
     "debounce-collect": "1.0.2",
