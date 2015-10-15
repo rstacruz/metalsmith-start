@@ -1,3 +1,8 @@
+## [v1.3.4]
+> Oct 16, 2015
+
+- Fix jaggedness in status display
+
 ## [v1.3.3]
 > Oct 16, 2015
 
@@ -80,3 +85,4 @@
 [v1.3.1]: https://github.com/rstacruz/metalsmith-start/compare/v1.3.0...v1.3.1
 [v1.3.2]: https://github.com/rstacruz/metalsmith-start/compare/v1.3.1...v1.3.2
 [v1.3.3]: https://github.com/rstacruz/metalsmith-start/compare/v1.3.2...v1.3.3
+[v1.3.4]: https://github.com/rstacruz/metalsmith-start/compare/v1.3.3...v1.3.4

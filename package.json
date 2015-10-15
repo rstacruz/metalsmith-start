@@ -1,7 +1,7 @@
 {
   "name": "metalsmith-start",
   "description": "development server for metalsmith.",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "author": "Rico Sta. Cruz <rico@ricostacruz.com>",
   "bin": {
     "metalsmith-start": "bin/metalsmith-start",
