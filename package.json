@@ -22,7 +22,7 @@
     "mz": "2.1.0",
     "object-assign": "3.0.0",
     "observatory": "1.0.0",
-    "superstatic": "1.2.3",
+    "superstatic": "3.0.0",
     "thunkify": "2.1.2",
     "tiny-lr": "0.2.1",
     "unyield": "0.0.1"
