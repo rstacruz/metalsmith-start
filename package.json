@@ -15,6 +15,7 @@
     "chokidar": "1.2.0",
     "co": "4.6.0",
     "commander": "2.9.0",
+    "connect": "3.4.0",
     "connect-livereload": "0.5.3",
     "debounce-collect": "1.0.2",
     "get-port": "1.0.0",
