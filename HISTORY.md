@@ -1,3 +1,8 @@
+## [v1.3.3]
+> Oct 16, 2015
+
+- Update [observatory](https://www.npmjs.com/package/observatory) to v1.0.0
+
 ## [v1.3.2]
 - Oct 15, 2015
 
@@ -74,3 +79,4 @@
 [v1.3.0]: https://github.com/rstacruz/metalsmith-start/compare/v1.2.0...v1.3.0
 [v1.3.1]: https://github.com/rstacruz/metalsmith-start/compare/v1.3.0...v1.3.1
 [v1.3.2]: https://github.com/rstacruz/metalsmith-start/compare/v1.3.1...v1.3.2
+[v1.3.3]: https://github.com/rstacruz/metalsmith-start/compare/v1.3.2...v1.3.3
