@@ -1,3 +1,8 @@
+## [v1.4.0]
+> Oct 16, 2015
+
+- Update superstatic to [v3.0.0](https://github.com/firebase/superstatic/blob/master/CHANGELOG.md) (from 1.2.3)
+
 ## [v1.3.4]
 > Oct 16, 2015
 
@@ -86,3 +91,4 @@
 [v1.3.2]: https://github.com/rstacruz/metalsmith-start/compare/v1.3.1...v1.3.2
 [v1.3.3]: https://github.com/rstacruz/metalsmith-start/compare/v1.3.2...v1.3.3
 [v1.3.4]: https://github.com/rstacruz/metalsmith-start/compare/v1.3.3...v1.3.4
+[v1.4.0]: https://github.com/rstacruz/metalsmith-start/compare/v1.3.4...v1.4.0
