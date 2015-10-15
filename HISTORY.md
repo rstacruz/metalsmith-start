@@ -1,4 +1,5 @@
-## [v1.3.0] - unreleased
+## [v1.3.0]
+> Oct 15, 2015
 
 - Updated look of the CLI reporter.
 
