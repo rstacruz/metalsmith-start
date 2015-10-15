@@ -27,7 +27,9 @@ describe('my project', function () {
     })
 
     it('has livereload', function (next) {
-      this.req.get('/livereload.js')
+      this.req
+        .get('/livereload.js')
+        .set('Accept', 'text/html')
         .expect(200)
         .end(next)
     })
@@ -55,6 +57,7 @@ describe('my project', function () {
   describe('main port', function () {
     it('has livereload', function (next) {
       request(this.run.app).get('/')
+        .set('Accept', 'text/html')
         .expect(/\/livereload.js/)
         .end(next)
     })

@@ -1,0 +1,5 @@
+{
+  "name": "mylol",
+  "root": "./public",
+  "clean_urls": true
+}
