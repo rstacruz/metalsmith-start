@@ -1,3 +1,8 @@
+## [v1.4.2]
+> Oct 16, 2015
+
+- Fix last version by bulding `connect`
+
 ## [v1.4.1]
 > Oct 16, 2015
 
@@ -92,3 +97,4 @@
 [v1.3.3]: https://github.com/rstacruz/metalsmith-start/compare/v1.3.2...v1.3.3
 [v1.3.4]: https://github.com/rstacruz/metalsmith-start/compare/v1.3.3...v1.3.4
 [v1.4.1]: https://github.com/rstacruz/metalsmith-start/compare/v1.3.4...v1.4.1
+[v1.4.2]: https://github.com/rstacruz/metalsmith-start/compare/v1.4.1...v1.4.2
