@@ -30,7 +30,7 @@
     "unyield": "0.0.1"
   },
   "devDependencies": {
-    "expect": "1.12.2",
+    "expect": "1.13.0",
     "istanbul": "0.4.0",
     "metalsmith-layouts": "^1.4.1",
     "mocha": "2.3.3",
