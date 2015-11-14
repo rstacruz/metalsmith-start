@@ -2,11 +2,9 @@ var Runner = require('../../lib/runner')
 var getport = require('get-port')
 
 module.exports = function runner (path) {
-  global.before(function (next) {
-    getport(function (err, port) {
-      if (err) throw err
+  global.before(function () {
+    return getport().then(function (port) {
       this.port = port
-      next()
     }.bind(this))
   })
 
