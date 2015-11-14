@@ -18,7 +18,7 @@
     "connect": "3.4.0",
     "connect-livereload": "0.5.3",
     "debounce-collect": "1.0.2",
-    "get-port": "1.0.0",
+    "get-port": "2.1.0",
     "gnode": "0.1.1",
     "metalsmith": "2.1.0",
     "mz": "2.1.0",
