@@ -7,16 +7,40 @@ if (typeof process.env.METALSMITH === 'undefined') {
 
 var dir = process.cwd()
 var Runner = require('../lib/runner')
-var program = require('commander')
+// var program = require('commander')
 var fs = require('fs')
 var join = require('path').join
+var meow = require('meow')
 
-program
-  .version(require('../package.json').version)
-  .option('-p, --port <port>', 'specify the port', Number)
-  .option('-R, --no-livereload', 'disable livereload')
-  .option('--config', 'shows a sample config file')
-  .parse(process.argv)
+var program = meow([
+  'Usage:',
+  '     metalsmith-start [options]',
+  '',
+  'Options:',
+  '    -p, --port <port>     specify the port',
+  '    -R, --no-livereload   disable livereload',
+  '        --config          show sample config file',
+  '',
+  'Other options:',
+  '    -h, --help            print usage information',
+  '    -v, --version         show version info and exit'
+].join('\n'), {
+  string: 'port',
+  boolean: 'livereload',
+  default: {
+    livereload: true
+  },
+  alias: {
+    p: 'port',
+    h: 'help',
+    v: 'version'
+  }
+}).flags
+
+if (program.r) {
+  program.livereload = false
+  delete program.r
+}
 
 try {
   if (program.config) {

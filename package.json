@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-start",
-  "description": "development server for metalsmith.",
+  "description": "Development server for Metalsmith.",
   "version": "1.4.2",
   "author": "Rico Sta. Cruz <rico@ricostacruz.com>",
   "bin": {
@@ -14,7 +14,6 @@
     "chalk": "1.1.1",
     "chokidar": "1.2.0",
     "co": "4.6.0",
-    "commander": "2.9.0",
     "connect": "3.4.0",
     "connect-livereload": "0.5.3",
     "debounce-collect": "1.0.2",
