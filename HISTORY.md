@@ -1,3 +1,9 @@
+## master
+
+- Shorten required console columns for wide mode
+- Internal: update get-port to v2.1.0
+- Internal: update to meow v3.5.0
+
 ## [v1.4.2]
 > Oct 16, 2015
 
