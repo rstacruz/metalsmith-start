@@ -27,8 +27,7 @@
     "superstatic": "4.0.1",
     "throat": "2.0.2",
     "thunkify": "2.1.2",
-    "tiny-lr": "0.2.1",
-    "unyield": "0.0.1"
+    "tiny-lr": "0.2.1"
   },
   "devDependencies": {
     "expect": "1.13.4",

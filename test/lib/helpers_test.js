@@ -37,24 +37,19 @@ describe('helpers: diffHashes()', function () {
 describe('helpers: safe()', function () {
   var safe = Helpers.safe
 
-  it('works', function (next) {
+  it('works', function () {
     var stat = safe(require('mz/fs').stat)
-    stat('non-existent-file.txt', function (err, res) {
-      if (err) throw err
-      next()
-    })
+    return stat('non-existent-file.txt')
   })
 })
 
 describe('helpers: filterFiles()', function () {
   var filterFiles = Helpers.filterFiles
 
-  it('works', function (next) {
-    filterFiles(fixture('files/'), ['file1.txt', 'notafile.txt'],
-      function (err, result) {
-        if (err) throw err
+  it('works', function () {
+    return filterFiles(fixture('files/'), ['file1.txt', 'notafile.txt'])
+      .then(function (result) {
         expect(result).toEqual(['file1.txt'])
-        next()
       })
   })
 })

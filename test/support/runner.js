@@ -8,13 +8,10 @@ module.exports = function runner (path) {
     }.bind(this))
   })
 
-  global.before(function (next) {
+  global.before(function () {
     this.run = new Runner(path, { port: this.port })
     this.run.log = function () {}
-    this.run.start(function (err) {
-      if (err) throw err
-      next()
-    })
+    return this.run.start()
   })
 
   global.after(function () {
