@@ -9,7 +9,7 @@ describe('fixture: with_superstatic:', function () {
 
   runner(fixture('with_superstatic'))
 
-  it('honors clean_urls', function (next) {
+  it('honors cleanUrls', function (next) {
     request(this.run.app).get('/about')
       .expect(200)
       .end(next)

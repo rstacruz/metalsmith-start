@@ -65,9 +65,9 @@ if (module.parent) {
 
 <br>
 
-## Superstatic and Divshot
+## Superstatic
 
-If `superstatic.json` or `divshot.json` is found in the current directory, it'll automatically be picked up. This allows you to, say, use `clean_urls` to allow pages to be served without the `.html` extension.
+If `superstatic.json` is found in the current directory, it'll automatically be picked up. This allows you to, say, use `cleanUrls` to allow pages to be served without the `.html` extension.
 
 See [superstatic] for more information.
 
