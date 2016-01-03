@@ -1,5 +1,7 @@
-## master
+## [v2.0.0]
+> Jan  3, 2016
 
+- Update to [superstatic] v4.0.1. If you use `superstatic.json`, you will need to be update it; see [superstatic 4.0.0](https://github.com/firebase/superstatic/releases/tag/4.0.0) for info.
 - Shorten required console columns for wide mode
 - Internal: update get-port to v2.1.0
 - Internal: update to meow v3.5.0
@@ -84,11 +86,13 @@
 - Use NODE_ENV environment variable.
 - Disables watching and livereload on production.
 
-## v0.1.0
+## [v0.1.0]
 > Aug 14, 2015
 
 - Initial release.
 
+[superstatic]: https://www.npmjs.com/package/superstatic
+[v0.1.0]: https://github.com/rstacruz/metalsmith-start/tree/v0.1.0
 [v0.4.0]: https://github.com/rstacruz/metalsmith-start/compare/v0.1.0...v0.4.0
 [v0.5.0]: https://github.com/rstacruz/metalsmith-start/compare/v0.4.0...v0.5.0
 [v0.6.0]: https://github.com/rstacruz/metalsmith-start/compare/v0.5.0...v0.6.0
@@ -104,3 +108,4 @@
 [v1.3.4]: https://github.com/rstacruz/metalsmith-start/compare/v1.3.3...v1.3.4
 [v1.4.1]: https://github.com/rstacruz/metalsmith-start/compare/v1.3.4...v1.4.1
 [v1.4.2]: https://github.com/rstacruz/metalsmith-start/compare/v1.4.1...v1.4.2
+[v2.0.0]: https://github.com/rstacruz/metalsmith-start/compare/v1.4.2...v2.0.0

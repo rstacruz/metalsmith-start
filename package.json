@@ -1,7 +1,7 @@
 {
   "name": "metalsmith-start",
   "description": "Development server for Metalsmith.",
-  "version": "1.4.2",
+  "version": "2.0.0",
   "author": "Rico Sta. Cruz <rico@ricostacruz.com>",
   "bin": {
     "metalsmith-start": "bin/metalsmith-start",
@@ -19,10 +19,10 @@
     "debounce-collect": "1.0.2",
     "get-port": "2.1.0",
     "gnode": "0.1.1",
-    "meow": "3.5.0",
+    "meow": "3.6.0",
     "metalsmith": "2.1.0",
     "mz": "2.1.0",
-    "object-assign": "3.0.0",
+    "object-assign": "4.0.1",
     "observatory": "1.0.0",
     "superstatic": "4.0.1",
     "thunkify": "2.1.2",
@@ -32,7 +32,7 @@
   "devDependencies": {
     "expect": "1.13.4",
     "istanbul": "0.4.1",
-    "metalsmith-layouts": "^1.4.1",
+    "metalsmith-layouts": "1.4.2",
     "mocha": "2.3.4",
     "mocha-eventually": "1.1.0",
     "mocha-standard": "1.0.0",
