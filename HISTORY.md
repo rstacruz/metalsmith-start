@@ -1,3 +1,8 @@
+## [v2.0.1]
+> Jan  5, 2016
+
+- Fix "Can't modify headers" error messages.
+
 ## [v2.0.0]
 > Jan  3, 2016
 
@@ -109,3 +114,4 @@
 [v1.4.1]: https://github.com/rstacruz/metalsmith-start/compare/v1.3.4...v1.4.1
 [v1.4.2]: https://github.com/rstacruz/metalsmith-start/compare/v1.4.1...v1.4.2
 [v2.0.0]: https://github.com/rstacruz/metalsmith-start/compare/v1.4.2...v2.0.0
+[v2.0.1]: https://github.com/rstacruz/metalsmith-start/compare/v2.0.0...v2.0.1
