@@ -30,7 +30,7 @@
     "tiny-lr": "0.2.1"
   },
   "devDependencies": {
-    "expect": "1.14.0",
+    "expect": "1.16.0",
     "istanbul": "0.4.2",
     "metalsmith-layouts": "1.5.4",
     "mocha": "2.4.5",
