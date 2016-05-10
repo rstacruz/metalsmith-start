@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "chalk": "1.1.1",
-    "chokidar": "1.4.3",
+    "chokidar": "1.5.0",
     "co": "4.6.0",
     "connect": "3.4.0",
     "connect-livereload": "0.5.4",
