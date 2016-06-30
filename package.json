@@ -25,7 +25,7 @@
     "object-assign": "4.0.1",
     "observatory": "1.0.0",
     "superstatic": "4.0.1",
-    "throat": "2.0.2",
+    "throat": "3.0.0",
     "thunkify": "2.1.2",
     "tiny-lr": "0.2.1"
   },
