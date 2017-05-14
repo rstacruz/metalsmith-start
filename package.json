@@ -33,7 +33,7 @@
     "expect": "1.20.2",
     "istanbul": "0.4.2",
     "metalsmith-layouts": "1.5.4",
-    "mocha": "2.4.5",
+    "mocha": "3.4.0",
     "mocha-eventually": "1.1.0",
     "mocha-standard": "1.0.0",
     "standard": "6.0.8",
