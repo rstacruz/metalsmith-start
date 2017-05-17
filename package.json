@@ -14,7 +14,7 @@
     "chalk": "1.1.1",
     "chokidar": "1.6.0",
     "co": "4.6.0",
-    "connect": "3.4.0",
+    "connect": "3.6.2",
     "connect-livereload": "0.5.4",
     "debounce-collect": "1.0.2",
     "get-port": "2.1.0",
