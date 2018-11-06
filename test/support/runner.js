@@ -10,7 +10,7 @@ module.exports = function runner (path) {
 
   global.before(function () {
     this.run = new Runner(path, { port: this.port })
-    //this.run.log = function () {}
+    this.run.log = function () {}
     return this.run.start()
   })
 
