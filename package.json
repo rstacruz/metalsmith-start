@@ -11,33 +11,33 @@
     "url": "https://github.com/rstacruz/metalsmith-start/issues"
   },
   "dependencies": {
-    "chalk": "1.1.1",
-    "chokidar": "1.6.0",
+    "chalk": "^2.4.1",
+    "chokidar": "^2.0.4",
     "co": "4.6.0",
     "connect": "^3.6.6",
-    "connect-livereload": "0.5.4",
+    "connect-livereload": "^0.6.0",
     "debounce-collect": "1.0.2",
-    "get-port": "2.1.0",
+    "get-port": "^4.0.0",
     "gnode": "0.1.2",
-    "meow": "3.7.0",
+    "meow": "^5.0.0",
     "metalsmith": "^2.3.0",
-    "mz": "2.4.0",
-    "object-assign": "4.0.1",
+    "mz": "^2.7.0",
+    "object-assign": "^4.1.1",
     "observatory": "1.0.0",
-    "superstatic": "4.0.1",
-    "throat": "2.0.2",
+    "superstatic": "^6.0.3",
+    "throat": "^4.1.0",
     "thunkify": "2.1.2",
-    "tiny-lr": "0.2.1"
+    "tiny-lr": "^1.1.1"
   },
   "devDependencies": {
-    "expect": "1.20.2",
+    "expect": "^23.6.0",
     "istanbul": "^0.4.5",
-    "metalsmith-layouts": "1.5.4",
-    "mocha": "2.4.5",
+    "metalsmith-layouts": "^2.3.0",
+    "mocha": "^5.2.0",
     "mocha-eventually": "1.1.0",
     "mocha-standard": "1.0.0",
-    "standard": "6.0.8",
-    "supertest": "1.2.0"
+    "standard": "^12.0.1",
+    "supertest": "^3.3.0"
   },
   "directories": {
     "test": "test"
