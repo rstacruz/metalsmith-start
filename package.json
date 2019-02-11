@@ -56,7 +56,7 @@
     "url": "git+https://github.com/rstacruz/metalsmith-start.git"
   },
   "scripts": {
-    "coverage": "istanbul cover _mocha -- -R spec",
+    "coverage": "istanbul cover _mocha -- --exit -R spec",
     "test": "mocha --exit"
   },
   "docpress": {
