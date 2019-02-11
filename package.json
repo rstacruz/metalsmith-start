@@ -57,7 +57,7 @@
   },
   "scripts": {
     "coverage": "istanbul cover _mocha -- -R spec",
-    "test": "mocha"
+    "test": "mocha --exit"
   },
   "docpress": {
     "css": "http://ricostacruz.com/docpress-rsc/style.css",
