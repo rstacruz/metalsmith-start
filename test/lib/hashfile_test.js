@@ -7,30 +7,30 @@ describe('hashfile', function () {
   describe('hashFile()', function () {
     it('works', function () {
       return hashFile(fixture('files/file1.txt'))
-      .then(function (res) {
-        expect(res).toEqual('ce57c01c8bda67ce22ded81b28657213a99e69b3')
-      })
+        .then(function (res) {
+          expect(res).toEqual('ce57c01c8bda67ce22ded81b28657213a99e69b3')
+        })
     })
 
     it('works again', function () {
       return hashFile(fixture('files/file2.txt'))
-      .then(function (res) {
-        expect(res).toEqual('d06a59c73d2363d6c0692de0e3d7629a9480f901')
-      })
+        .then(function (res) {
+          expect(res).toEqual('d06a59c73d2363d6c0692de0e3d7629a9480f901')
+        })
     })
 
     it('can handle not founds', function () {
       return hashFile('ayylmao')
-      .then(function (res) {
-        expect(res).toEqual(null)
-      })
+        .then(function (res) {
+          expect(res).toEqual(null)
+        })
     })
 
     it('can handle directories', function () {
       return hashFile(fixture('files/'))
-      .then(function (res) {
-        expect(res).toEqual(null)
-      })
+        .then(function (res) {
+          expect(res).toEqual(null)
+        })
     })
   })
 
@@ -42,18 +42,18 @@ describe('hashfile', function () {
       ]
 
       return hashFiles(fixture('files'), files)
-      .then(function (res) {
-        this.result = res
-      }.bind(this))
+        .then(function (res) {
+          this.result = res
+        }.bind(this))
     })
 
     it('turns it into an object', function () {
-      expect(this.result).toBeAn('object')
+      expect(this.result).toEqual(expect.any(Object))
     })
 
     it('has files for keys', function () {
-      expect(Object.keys(this.result)).toInclude('file1.txt')
-      expect(Object.keys(this.result)).toInclude('file2.txt')
+      expect(Object.keys(this.result)).toContain('file1.txt')
+      expect(Object.keys(this.result)).toContain('file2.txt')
     })
 
     it('returns stuff', function () {

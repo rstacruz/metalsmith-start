@@ -2,6 +2,8 @@
   "source": "./src",
   "destination": "./public",
   "plugins": {
-    "metalsmith-layouts": { "engine": "handlebars" }
+    "metalsmith-layouts": {
+      "suppressNoFilesError": true
+    }
   }
 }
